@@ -1,0 +1,188 @@
+$ git touch third.txt
+git: 'touch' is not a git command. See 'git --help'.
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again
+$ git-touch third.txt
+bash: git-touch: command not found
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again
+$ touch third.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again
+$ git init
+Initialized empty Git repository in C:/Users/USER/OneDrive/Bureau/GomyCode/learn_git_again/.git/
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git add third.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git comit -m "adding third.txt
+> git comit -m "adding third.txt"
+> git commit -m "adding third.txt"
+> git comit -m "adding third.txt
+git comit -m "adding third.txt"
+$ git commit -m "adding third.txt"
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+bash: $: command not found
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 075c5bd] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git log
+commit 075c5bd3f03a0513193b114e6945abd4aed8bc04 (HEAD -> master)
+Author: amine-99404 <saadaoui.amine95@gmail.com>
+Date:   Tue Jan 12 14:45:51 2021 +0100
+
+    adding third.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ touch forth.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git commit -m "adding forth.txt"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        forth.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git add forth.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git commit -m "adding forth.txt"
+[master c7ffcbe] adding forth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 forth.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git commit -m "update"
+[master 96bc6a8] update
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git commit -m "removing third.txt"
+On branch master
+nothing to commit, working tree clean
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git log
+commit 96bc6a88a21029e120170b849499a28a91109585 (HEAD -> master)
+Author: amine-99404 <saadaoui.amine95@gmail.com>
+Date:   Tue Jan 12 14:51:31 2021 +0100
+
+    update
+
+commit c7ffcbe0c40ae961ae7ab4ab66fd60eaa9f597e6
+Author: amine-99404 <saadaoui.amine95@gmail.com>
+Date:   Tue Jan 12 14:49:13 2021 +0100
+
+    adding forth.txt
+
+commit 075c5bd3f03a0513193b114e6945abd4aed8bc04
+Author: amine-99404 <saadaoui.amine95@gmail.com>
+Date:   Tue Jan 12 14:45:51 2021 +0100
+
+    adding third.txt
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git config --global core.pager=cat
+error: invalid key: core.pager=cat
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git config --global core.pager cat
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=saadaoui.amine95@gmail.com
+user.name=amine-99404
+color.ui=true
+core.editor=emacs
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+USER@BEST-TECHNOLOGY MINGW64 ~/OneDrive/Bureau/GomyCode/learn_git_again (master)
+$
